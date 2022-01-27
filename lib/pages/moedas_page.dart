@@ -1,4 +1,5 @@
 import 'package:app/models/moeda.dart';
+import 'package:app/pages/moedas_detalhes_page.dart';
 import 'package:app/repositories/moeda_repositoty.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -43,7 +44,14 @@ class _MoedasPageState extends State<MoedasPage> {
     }
   }
 
-  mostrarDetalhes(Moeda moeda) {}
+  mostrarDetalhes(Moeda moeda) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => MoedasDetalhesPage(moeda: moeda),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -113,4 +121,4 @@ class _MoedasPageState extends State<MoedasPage> {
   }
 }
 
-//09=>2:16
+//10=>12:06
